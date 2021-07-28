@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/home/home.dart';
+import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/registration/registration.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
