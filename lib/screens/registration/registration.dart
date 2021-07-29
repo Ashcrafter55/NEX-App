@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
-import 'package:flutter_template_project/screens/login/login.dart';
+import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
@@ -98,7 +98,7 @@ Widget build(BuildContext context) {
 
               GestureDetector(
                 onTap: (){
-                  Get.offAll(LoginScreen());
+                  Get.offAll(StartScreen());
                 },
                 child: RichText(text: TextSpan(
                   children: [
