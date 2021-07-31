@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'monkeman69420',
+      title: 'XtraEats',
       theme: ThemeData(
   
         primarySwatch: Colors.blue,

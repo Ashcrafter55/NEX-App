@@ -6,7 +6,7 @@ import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
-class RegistrationScreen extends StatelessWidget {
+class BuyerRegistrationScreen extends StatelessWidget {
 
 Widget build(BuildContext context) {
     // double _width = MediaQuery.of(context).size.width;
@@ -25,71 +25,108 @@ Widget build(BuildContext context) {
                 SizedBox(
                   height: 15,
                 ),
-                   TextField(
+                   Center(
+                     child: SizedBox(
+                       width: 300,
+                       child: TextField(
                   decoration: InputDecoration(
-                      labelText: "Name",
-                      hintText: "Santos Enoque",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20))),
+                          labelText: "Name",
+                          hintText: "firstName lastName",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                ),
+                     ),
+                   ),
+                SizedBox(
+                  height: 15,
+                ),
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          labelText: "Email",
+                          hintText: "abc@domain.com",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 15,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                      labelText: "Email",
-                      hintText: "abc@domain.com",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      labelText: "Password",
-                      hintText: "123",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20))),
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          labelText: "Password",
+                          hintText: "Password123",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
                 ),
                  SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
-                Row(
-                  children: [
-                    Text(
-                      "Location",
-                          style: TextStyle(fontSize: 25)
-                    ),
-                    CustomButton(
-                      onTap: (){
-                        print("gps location");
-                      },
-                      title: "Use gps",
-                    )
-                  ],
+                Center(
+                  child: Text(
+                    "Location",
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)
+                  ),
                 ),
                 SizedBox(
                   height: 15,
                 ),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      labelText: "Address",
-                      hintText: "123 potato st, Springfield, Ohioio, 69420",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20))),
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          labelText: "Address",
+                          hintText: "123 potato st, Springfield, Ohioio, 69420",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
                 ),
                   SizedBox(
                   height: 15,
                 ),
-                CustomButton(
-                  onTap: (){
-                    Get.offAll(HomeScreen());
+                Center(
+                  child: CustomButton(
+                    onTap: (){
+                      print("Allow access pls");
+                    },
+                    title: "Allow access to gps",
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                // replace with map api later maybe
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: Image(
+                      image: NetworkImage('https://miro.medium.com/max/1400/1*qYUvh-EtES8dtgKiBRiLsA.png'),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: CustomButton(
+                    onTap: (){
+                      Get.offAll(HomeScreen());
 
-                  },
-                  title: "Register",
+                    },
+                    title: "Register",
+                  ),
                 ),
               ],
             ),

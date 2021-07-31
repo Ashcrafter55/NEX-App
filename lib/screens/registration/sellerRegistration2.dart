@@ -1,28 +1,25 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
-import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
+import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({ Key key }) : super(key: key);
+class SellerRegistrationScreen2 extends StatelessWidget {
 
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
+    // double _width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
+      body: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              SizedBox(
-                height: 200,
-              ),
               Center(
                 child:
-                Text("Login",
+                Text("Register",
                     style: TextStyle(
                         fontSize: 30, fontWeight: FontWeight.bold)),
               ),
@@ -34,11 +31,22 @@ class LoginScreen extends StatelessWidget {
                   width: 300,
                   child: TextField(
                     decoration: InputDecoration(
-                        labelText: "Email",
-                        hintText: "abc@domain.com",
+                        labelText: "Description of Restaurant",
+                        hintText: "is very cool yes",
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 80, horizontal: 10),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20))),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: Text(
+                    "Create menu",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)
                 ),
               ),
               SizedBox(
@@ -50,15 +58,38 @@ class LoginScreen extends StatelessWidget {
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                        labelText: "Password",
-                        hintText: "123",
+                        labelText: "Search database",
+                        hintText: "Search database",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20))),
                   ),
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
+              ),
+              Center(
+                child: Text(
+                  "Menu",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
+                ),
+              ),
+              Center(
+                child: Container(
+                  width: 300,
+                  padding: const EdgeInsets.all(20.0),
+                  decoration: BoxDecoration(
+                    border: Border.all()
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Nothing yet!",
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
               ),
               Center(
                 child: CustomButton(
@@ -66,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                     Get.offAll(HomeScreen());
 
                   },
-                  title: "Login",
+                  title: "Register",
                 ),
               ),
             ],

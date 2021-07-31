@@ -19,6 +19,9 @@ Widget build(BuildContext context) {
             padding: const EdgeInsets.all(8.0),
             child: ListView(
               children: [
+                SizedBox(
+                  height: 200,
+                ),
                 Center(
                   child:
                     Text("Welcome To Xtra Eats",
@@ -30,6 +33,9 @@ Widget build(BuildContext context) {
                   Text("To continue please choose an option below",
                       style: TextStyle(
                           fontSize: 15)),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 Center(
                   child: CustomButton(

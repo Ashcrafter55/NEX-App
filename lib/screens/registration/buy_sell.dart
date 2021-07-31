@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
+import 'package:flutter_template_project/screens/registration/sellerRegistration.dart';
 import 'package:flutter_template_project/screens/login/login.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
@@ -18,16 +19,25 @@ class BuySell extends StatelessWidget {
         child: Container(
           child: ListView(
             children: [
+              SizedBox(
+                height: 200,
+              ),
               Center(
                 child:
-                  Text("Are you looking to buy food or sell food?",
-                      style: TextStyle(
-                          fontSize: 30, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    width: 300,
+                    child: Text("Are you looking to buy food or sell food?",
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold)),
+                  ),
+              ),
+              SizedBox(
+                height: 15,
               ),
               Center(
                 child: CustomButton(
                   onTap: (){
-                    Get.offAll(RegistrationScreen());
+                    Get.offAll(BuyerRegistrationScreen());
                   },
                   title: "Buyer",
                 ),
@@ -39,7 +49,7 @@ class BuySell extends StatelessWidget {
               Center(
                 child: CustomButton(
                   onTap: (){
-                    Get.offAll(RegistrationScreen());
+                    Get.offAll(SellerRegistrationScreen());
                   },
                   title: "Seller",
                 ),
