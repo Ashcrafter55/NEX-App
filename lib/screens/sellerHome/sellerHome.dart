@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/login/login.dart';
+import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
@@ -33,7 +33,7 @@ class SellerHomeScreen extends StatelessWidget {
                 leading: Icon(Icons.exit_to_app),
                 title: CustomText(text: "Log out",),
                 onTap: (){
-                  Get.offAll(LoginScreen());
+                  Get.offAll(StartScreen());
                 },
               )
             ],
