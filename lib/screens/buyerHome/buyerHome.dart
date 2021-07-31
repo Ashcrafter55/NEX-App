@@ -5,26 +5,28 @@ import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({ Key key }) : super(key: key);
-
+  //const HomeScreen({ Key key }) : super(key: key);
+  
+  var items = [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+    BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Profile")
+  ];
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
               length: 3,
 
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: items,
+        ),
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
           title: CustomText(text: "Demo App",),
-               bottom: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car, color: Colors.black,)),
-                Tab(icon: Icon(Icons.directions_transit, color: Colors.black,)),
-                Tab(icon: Icon(Icons.directions_bike, color: Colors.black,)),
-              ],
-            ),
           ),
           drawer: Drawer(
             child: ListView(
