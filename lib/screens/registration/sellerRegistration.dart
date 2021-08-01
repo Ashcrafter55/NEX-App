@@ -15,7 +15,8 @@ class SellerRegistrationScreen extends StatelessWidget {
       body: Container(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ListView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
                 child:

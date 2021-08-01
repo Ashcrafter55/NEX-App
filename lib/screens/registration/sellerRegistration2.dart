@@ -15,7 +15,8 @@ class SellerRegistrationScreen2 extends StatelessWidget {
       body: Container(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ListView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
                 child:
@@ -53,15 +54,21 @@ class SellerRegistrationScreen2 extends StatelessWidget {
                 height: 15,
               ),
               Center(
-                child: SizedBox(
+                child: Container(
+                  padding: EdgeInsets.only(left: 16),
                   width: 300,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                         labelText: "Search database",
                         hintText: "Search database",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20))),
+                        icon: Icon(Icons.search),
+                        border: InputBorder.none
+                    ),
                   ),
                 ),
               ),
@@ -79,7 +86,8 @@ class SellerRegistrationScreen2 extends StatelessWidget {
                   width: 300,
                   padding: const EdgeInsets.all(20.0),
                   decoration: BoxDecoration(
-                    border: Border.all()
+                    border: Border.all(),
+                        borderRadius: BorderRadius.circular(20)
                   ),
                   child: Center(
                     child: Text(

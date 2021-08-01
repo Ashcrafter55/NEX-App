@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
@@ -17,11 +18,9 @@ class BuySell extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          child: ListView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 200,
-              ),
               Center(
                 child:
                   SizedBox(

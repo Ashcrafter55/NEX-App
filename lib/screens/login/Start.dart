@@ -15,50 +15,44 @@ Widget build(BuildContext context) {
     // double _width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListView(
-              children: [
-                SizedBox(
-                  height: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Text("Welcome To Xtra Eats",
+                    style: TextStyle(
+                        fontSize: 30, fontWeight: FontWeight.bold)),
+              ),
+              Center(
+                child:
+                Text("To continue please choose an option below",
+                    style: TextStyle(
+                        fontSize: 15)),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Center(
+                child: CustomButton(
+                  onTap: (){
+                    Get.offAll(LoginScreen());
+                  },
+                  title: "Login",
                 ),
-                Center(
-                  child:
-                    Text("Welcome To Xtra Eats",
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold)),
-                ),
-                Center(
-                  child:
-                  Text("To continue please choose an option below",
-                      style: TextStyle(
-                          fontSize: 15)),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Center(
-                  child: CustomButton(
-                    onTap: (){
-                      Get.offAll(LoginScreen());
-                    },
-                    title: "Login",
-                  ),
-                ),
+              ),
 
-                 SizedBox(
-                  height: 15,
+               SizedBox(
+                height: 15,
+              ),
+              Center(
+                child: CustomButton(
+                  onTap: (){
+                    Get.offAll(BuySell());
+                  },
+                  title: "Create account",
                 ),
-                Center(
-                  child: CustomButton(
-                    onTap: (){
-                      Get.offAll(BuySell());
-                    },
-                    title: "Create account",
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
     );
