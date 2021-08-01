@@ -43,7 +43,28 @@ class HomeScreen extends StatelessWidget {
         body: TabBarView(
             children: [
               Center(child: CustomText(text: "Screen one",),),
-                           Center(child: CustomText(text: "Screen two",),),
+                          Column(
+                            children: [
+                              Row(mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.only(top: 50),
+                                    padding: EdgeInsets.only(left: 16),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(color: Colors.black),
+                                      ),
+                                      child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: "search restaurant",
+                                      icon: Icon (Icons.search),
+                                      border: InputBorder.none,
+                                    ),
+                                  ), width: 500),
+                                ],
+                              ),
+                            ],
+                          ),
               Center(child: CustomText(text: "Screen three",),),
 
             ],
