@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                                       icon: Icon (Icons.search),
                                       border: InputBorder.none,
                                     ),
-                                  ), width: 500),
+                                  ), width: 300),
                                 ],
                               ),
                             ],
