@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
+import 'package:flutter_template_project/screens/buyerHome/buyerHome.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
+import 'package:flutter_template_project/screens/buyerHome/homePage.dart';
 import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
@@ -63,7 +65,7 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: CustomButton(
                   onTap: (){
-                    Get.offAll(HomeScreen());
+                    Get.offAll(homePage());
 
                   },
                   title: "Login",
