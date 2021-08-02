@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/login/Start.dart';
+import 'package:flutter_template_project/screens/sellerHome/sellhome.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
+
+import 'SellerProfile.dart';
 
 class SellerHomeScreen extends StatelessWidget {
   const SellerHomeScreen({ Key key }) : super(key: key);
@@ -10,7 +13,7 @@ class SellerHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 2,
 
       child: Scaffold(
         appBar: AppBar(
@@ -41,10 +44,8 @@ class SellerHomeScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            Center(child: CustomText(text: "Screen one",),),
-            Center(child: CustomText(text: "Screen two",),),
-            Center(child: CustomText(text: "Screen three",),),
-
+            SellHome(),
+            SellProfile()
           ],
         ),
       ),
