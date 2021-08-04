@@ -42,7 +42,8 @@ class _homePageState extends State<homePage> {
           },
         ),
         appBar: AppBar(
-          title: Text("hello"),
+          leading: Icon(Icons.exit_to_app),
+
         ),
         body: pages[i]);
   }

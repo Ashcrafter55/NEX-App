@@ -11,7 +11,7 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Icon(Icons.home),
+        child: Text("Screen one")
     );
   }
 }
