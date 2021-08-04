@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
@@ -5,9 +6,12 @@ import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/screens/registration/sellerRegistration2.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart' as globalVar;
 import 'package:get/get.dart';
 
 class SellerRegistrationScreen extends StatelessWidget {
+
+  final Controller = TextEditingController();
 
   Widget build(BuildContext context) {
     // double _width = MediaQuery.of(context).size.width;
@@ -35,7 +39,9 @@ class SellerRegistrationScreen extends StatelessWidget {
                         labelText: "Restaurant Name",
                         hintText: "le name",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20))),
+                            borderRadius: BorderRadius.circular(20)
+                        )
+                    ),
                   ),
                 ),
               ),

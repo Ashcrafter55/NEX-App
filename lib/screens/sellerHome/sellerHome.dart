@@ -1,54 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/login/Start.dart';
+import 'package:flutter_template_project/screens/login/login.dart';
 import 'package:flutter_template_project/screens/sellerHome/sellhome.dart';
+import 'package:flutter_template_project/screens/sellerHome/SellerProfile.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
-import 'SellerProfile.dart';
+class sellHomePage extends StatefulWidget {
+  sellHomePage({Key key}) : super(key: key);
 
-class SellerHomeScreen extends StatelessWidget {
-  const SellerHomeScreen({ Key key }) : super(key: key);
+  @override
+  _sellHomePageState createState() => _sellHomePageState();
+}
+
+
+class _sellHomePageState extends State<sellHomePage> {
+  var i  = 0;
+  var items = [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Profile")
+  ];
+
+  var pages = [
+    SellHome(),
+    SellProfile()
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
-          title: CustomText(text: "Demo App",),
-          bottom: TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.directions_car, color: Colors.black,)),
-              Tab(icon: Icon(Icons.directions_transit, color: Colors.black,))
-            ],
-          ),
+    return Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: i,
+          items: items,
+          onTap: (index){
+            setState((){
+              i = index;
+            });
+          },
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              UserAccountsDrawerHeader(accountName: CustomText(text: "Santos Enoque",), accountEmail: CustomText(text: "santosenoque.ss@gmail.com",)),
-              ListTile(
-                leading: Icon(Icons.exit_to_app),
-                title: CustomText(text: "Log out",),
-                onTap: (){
-                  Get.offAll(StartScreen());
-                },
-              )
-            ],
-          ),
-        ),
-        body: TabBarView(
-          children: [
-            SellHome(),
-            SellProfile()
-          ],
-        ),
-      ),
+        body: pages[i]
     );
   }
 }

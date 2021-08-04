@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+var sales = 0;
+
 class SellHome extends StatelessWidget {
 
   @override
@@ -9,13 +11,15 @@ class SellHome extends StatelessWidget {
         child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "[Restaurant Name]",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
+
                   Text(
-                    "__ Total sales",
+                    "$sales Total sales",
                     style: TextStyle(fontSize: 20),
                   )
                 ],
