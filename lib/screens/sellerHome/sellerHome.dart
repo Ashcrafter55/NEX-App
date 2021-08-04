@@ -17,13 +17,13 @@ class sellHomePage extends StatefulWidget {
 class _sellHomePageState extends State<sellHomePage> {
   var i  = 0;
   var items = [
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Profile"),
     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Profile")
   ];
 
   var pages = [
+    SellProfile(),
     SellHome(),
-    SellProfile()
   ];
 
   @override
