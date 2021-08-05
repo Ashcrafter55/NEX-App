@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart';
+import 'package:flutter_template_project/screens/registration/sellerRegistration.dart';
 
 var sales = 0;
 
@@ -20,7 +22,7 @@ class _SellHomeState extends State<SellHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "[Restaurant Name]",
+                    "${restaurantName.text}",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
 

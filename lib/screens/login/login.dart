@@ -1,18 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/buyerHome.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/buyerHome/homePage.dart';
 import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
+import 'package:flutter_template_project/screens/sellerHome/SellerHome.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({ Key key }) : super(key: key);
+String alert = " ";
 
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key key}) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -32,7 +43,8 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: SizedBox(
                   width: 300,
-                  child: TextField(
+                  child: TextFormField(
+                    controller: Email,
                     decoration: InputDecoration(
                         labelText: "Email",
                         hintText: "abc@domain.com",
@@ -48,6 +60,7 @@ class LoginScreen extends StatelessWidget {
                 child: SizedBox(
                   width: 300,
                   child: TextField(
+                    controller: Password,
                     obscureText: true,
                     decoration: InputDecoration(
                         labelText: "Password",
@@ -63,12 +76,25 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: CustomButton(
                   onTap: (){
-                    Get.offAll(homePage());
-
+                    if (Email.text == "Seller" && Password.text == "Seller"){
+                      Get.offAll(sellHomePage());
+                    } else if (Email.text == "Buyer" && Password.text == "Buyer"){
+                      Get.offAll(homePage());
+                    } else {
+                      setState(() {
+                        alert = "Incorrect Email or Password";
+                      });
+                    }
                   },
                   title: "Login",
                 ),
               ),
+              Center(
+                child: Text(
+                    "$alert",
+                    style: TextStyle(color: Colors.red),
+                ),
+              )
             ],
           ),
         ),

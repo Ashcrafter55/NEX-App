@@ -6,12 +6,10 @@ import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/screens/registration/sellerRegistration2.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
-import 'package:flutter_template_project/helpers/globalVar.dart' as globalVar;
+import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:get/get.dart';
 
 class SellerRegistrationScreen extends StatelessWidget {
-
-  final Controller = TextEditingController();
 
   Widget build(BuildContext context) {
     // double _width = MediaQuery.of(context).size.width;
@@ -34,7 +32,8 @@ class SellerRegistrationScreen extends StatelessWidget {
               Center(
                 child: SizedBox(
                   width: 300,
-                  child: TextField(
+                  child: TextFormField(
+                    controller: restaurantName,
                     decoration: InputDecoration(
                         labelText: "Restaurant Name",
                         hintText: "le name",
@@ -56,7 +55,9 @@ class SellerRegistrationScreen extends StatelessWidget {
                         labelText: "Work Email",
                         hintText: "abc@domain.com",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20))),
+                            borderRadius: BorderRadius.circular(20)
+                        )
+                    ),
                   ),
                 ),
               ),
@@ -131,7 +132,6 @@ class SellerRegistrationScreen extends StatelessWidget {
                 child: CustomButton(
                   onTap: (){
                     Get.offAll(SellerRegistrationScreen2());
-
                   },
                   title: "Next",
                 ),

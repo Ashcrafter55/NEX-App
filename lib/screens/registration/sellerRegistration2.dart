@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/login/Start.dart';
-import 'package:flutter_template_project/screens/sellerHome/sellerHome.dart';
-import 'package:flutter_template_project/screens/sellerHome/sellhome.dart';
+import 'package:flutter_template_project/screens/sellerHome/SellerHome.dart';
+import 'package:flutter_template_project/screens/sellerHome/SellerHomePage.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
@@ -102,7 +102,7 @@ class SellerRegistrationScreen2 extends StatelessWidget {
             Center(
               child: CustomButton(
                 onTap: (){
-                  Get.offAll(SellHome());
+                  Get.offAll(sellHomePage());
 
                 },
                 title: "Register",
