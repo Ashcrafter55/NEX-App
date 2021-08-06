@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/screens/buyerHome/resultCards.dart';
+import 'package:get/get.dart';
 
 class searchPage extends StatefulWidget {
   const searchPage({Key key}) : super(key: key);
@@ -36,13 +38,108 @@ class _searchPageState extends State<searchPage> {
         Row(
           children: [
             Container(
+              margin: EdgeInsets.only(left: 15),
               child: Text("Recents", style: TextStyle(
-                color: Colors.grey,
-                fontSize: 15,
+                color: Colors.black,
+                fontSize: 18,
                 fontWeight: FontWeight.bold),),
             )
-        ],
-          )
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("Pizza", style: TextStyle(
+                color: Colors.blue,
+                fontSize: 15
+              ),),
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 15, top: 20),
+              child: Text("Cuisines", style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),),
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("Breakfast", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15
+              ),),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: TextButton(
+                style: TextButton.styleFrom(textStyle: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15
+                )),
+                child: Text("Desserts"),
+                onPressed: (){
+                  Get.offAll(resultCards());
+                },
+              )
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("American", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15
+              ),),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("Indian", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15
+              ),),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("Japanese", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15
+              ),),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 30, top: 10),
+              child: Text("Chinese Thai Mexican", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15
+              ),),
+            ),
+          ],
+        ),
       ],
     );
   }
