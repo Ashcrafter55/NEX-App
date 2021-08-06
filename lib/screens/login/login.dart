@@ -78,6 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onTap: (){
                     if (Email.text == "Seller" && Password.text == "Seller"){
                       Get.offAll(sellHomePage());
+                      restaurantName.text = "Example's diner";
                     } else if (Email.text == "Buyer" && Password.text == "Buyer"){
                       Get.offAll(homePage());
                     } else {

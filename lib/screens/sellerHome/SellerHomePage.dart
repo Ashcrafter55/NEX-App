@@ -29,8 +29,19 @@ class _SellHomeState extends State<SellHome> {
                   Text(
                     "$sales Total sales",
                     style: TextStyle(fontSize: 20),
-                  )
+                  ),
                 ],
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: foodMenu.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        height: 50,
+                        child: Center(child: Text(foodMenu[index])),
+                      );
+                    }
+                ),
               )
             ]
         ),
