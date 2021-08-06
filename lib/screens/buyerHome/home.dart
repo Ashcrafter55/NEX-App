@@ -7,7 +7,7 @@ import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  //HomeScreen({ Key key }) : super(key: key);
+  HomeScreen({ Key key }) : super(key: key);
 
 
   @override
