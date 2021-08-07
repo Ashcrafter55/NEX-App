@@ -1,10 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/buyerHome/home.dart';
-import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/screens/sellerHome/SellerHome.dart';
-import 'package:flutter_template_project/screens/sellerHome/SellerHomePage.dart';
 import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';

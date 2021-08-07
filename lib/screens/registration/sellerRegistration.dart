@@ -1,11 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/buyerHome/home.dart';
-import 'package:flutter_template_project/screens/login/Start.dart';
 import 'package:flutter_template_project/screens/registration/sellerRegistration2.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
-import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:get/get.dart';
 
@@ -91,7 +87,6 @@ class SellerRegistrationScreen extends StatelessWidget {
               child: SizedBox(
                 width: 300,
                 child: TextField(
-                  obscureText: true,
                   decoration: InputDecoration(
                       labelText: "Address",
                       hintText: "123 potato st, Springfield, Ohioio, 69420",
@@ -105,9 +100,23 @@ class SellerRegistrationScreen extends StatelessWidget {
             ),
             Center(
               child: CustomButton(
-                onTap: (){
-                  print("Allow access pls");
-                },
+                onTap: () => showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('Allow access to location'),
+                    content: const Text('We need your location'),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'Cancel'),
+                        child: const Text('Cancel'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  ),
+                ),
                 title: "Allow access to gps",
               ),
             ),

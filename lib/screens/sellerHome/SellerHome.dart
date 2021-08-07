@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/login/login.dart';
 import 'package:flutter_template_project/screens/sellerHome/SellerHomePage.dart';
 import 'package:flutter_template_project/screens/sellerHome/SellerProfile.dart';
@@ -32,7 +31,7 @@ class _sellHomePageState extends State<sellHomePage> {
         drawer: Drawer(
           child: ListView(
             children: [
-              UserAccountsDrawerHeader(accountName: CustomText(text: "ExtraEats Test",), accountEmail: CustomText(text: "extraeats@gmail.com",)),
+              UserAccountsDrawerHeader(accountName: CustomText(text: "Xtra Eats Demo",), accountEmail: CustomText(text: "xtraeats@gmail.com",)),
               ListTile(
                 leading: Icon(Icons.exit_to_app),
                 title: CustomText(text: "Log Out",),

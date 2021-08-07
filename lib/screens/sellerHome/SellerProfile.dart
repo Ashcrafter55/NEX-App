@@ -14,7 +14,7 @@ class _SellProfileState extends State<SellProfile> {
       body: Container(
         child: Column(
           children: [
-            Text("f")
+            Text("Profile page")
           ]
         )
       ),

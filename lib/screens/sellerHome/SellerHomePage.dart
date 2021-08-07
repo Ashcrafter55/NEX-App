@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/registration/sellerRegistration.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 
 var sales = 0;
@@ -89,6 +88,9 @@ class _SellHomeState extends State<SellHome> {
                             onTap: (){
                               setState((){
                                 stock[index]--;
+                                if (stock[index] < 0){
+                                  stock[index] = 0;
+                                }
                               });
                             },
                             child: Container(
