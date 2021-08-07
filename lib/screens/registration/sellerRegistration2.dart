@@ -21,6 +21,7 @@ class _SellerRegistrationScreen2State extends State<SellerRegistrationScreen2> {
   void Add(){
     setState((){
       foodMenu.add(Menu.text);
+      stock.add(0);
     });
   }
 
@@ -71,7 +72,7 @@ class _SellerRegistrationScreen2State extends State<SellerRegistrationScreen2> {
               children: [
                 Container(
                   padding: EdgeInsets.only(left: 16),
-                  width: 300,
+                  width: 250,
                   decoration: BoxDecoration(
                       border: Border.all(),
                       borderRadius: BorderRadius.circular(20)
@@ -117,15 +118,23 @@ class _SellerRegistrationScreen2State extends State<SellerRegistrationScreen2> {
               child: ListView.builder(
                   itemCount: foodMenu.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      height: 50,
-                      child: Center(
-                          child: Text(
-                              "${foodMenu[index]}",
-                              style: TextStyle(
-                                fontSize: 18
-                              )
-                          )
+                    return Center(
+                      child: Container(
+                        height: 50,
+                        width: 300,
+                        decoration: BoxDecoration(
+                            color: Color(0xff8fdeeb),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.black)
+                        ),
+                        child: Center(
+                            child: Text(
+                                "${foodMenu[index]}",
+                                style: TextStyle(
+                                  fontSize: 18
+                                )
+                            )
+                        ),
                       ),
                     );
                   }

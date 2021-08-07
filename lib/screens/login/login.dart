@@ -79,6 +79,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     if (Email.text == "Seller" && Password.text == "Seller"){
                       Get.offAll(sellHomePage());
                       restaurantName.text = "Example's diner";
+                      for (int i = 0; i < 15; i++){
+                        foodMenu.add("Food $i");
+                        stock.add(0);
+                      }
                     } else if (Email.text == "Buyer" && Password.text == "Buyer"){
                       Get.offAll(homePage());
                     } else {
