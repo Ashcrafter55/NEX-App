@@ -10,8 +10,36 @@ class profilePage extends StatefulWidget {
 class _profilePageState extends State<profilePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Icon(Icons.account_circle),
+    return Scaffold(
+      body: Column(
+        children:[
+          Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 150),
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.purple,
+                  child: const Text("SR", style: TextStyle(
+                    fontSize: 20
+                  ),),
+                ) ,
+              )
+            ],
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top:15),
+                child: Text("Simon Ryding", style: TextStyle(
+                  fontSize: 20
+                ),),
+              )
+
+          ]
+        )
+        ]
+      )
     );
   }
 }
