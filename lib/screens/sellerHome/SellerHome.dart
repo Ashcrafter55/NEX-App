@@ -29,6 +29,20 @@ class _sellHomePageState extends State<sellHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              UserAccountsDrawerHeader(accountName: CustomText(text: "ExtraEats Test",), accountEmail: CustomText(text: "extraeats@gmail.com",)),
+              ListTile(
+                leading: Icon(Icons.exit_to_app),
+                title: CustomText(text: "Log Out",),
+                onTap: (){
+                  Get.offAll(LoginScreen());
+                },
+              )
+            ],
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: i,
           items: items,
@@ -37,6 +51,10 @@ class _sellHomePageState extends State<sellHomePage> {
               i = index;
             });
           },
+        ),
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          iconTheme: IconThemeData(color: Colors.black),
         ),
         body: pages[i]
     );

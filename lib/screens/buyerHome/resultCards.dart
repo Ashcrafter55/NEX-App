@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/screens/buyerHome/homePage.dart';
 import 'package:flutter_template_project/screens/buyerHome/searchPage.dart';
 import 'package:get/get.dart';
 class resultCards extends StatefulWidget {
@@ -17,14 +18,6 @@ class _resultCardsState extends State<resultCards> {
     return Scaffold(
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(mainAxisAlignment: MainAxisAlignment.end, crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                IconButton(
-                    onPressed:null ,
-                    icon: Icon(Icons.arrow_back),
-                )
-              ],
-            ),
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
@@ -36,6 +29,16 @@ class _resultCardsState extends State<resultCards> {
               ],
             ),
           ]
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.black),
+        leading: IconButton(
+          onPressed: (){
+            Get.offAll(homePage());
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
       ),
     );
   }

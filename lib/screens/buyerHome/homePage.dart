@@ -16,7 +16,7 @@ class homePage extends StatefulWidget {
 
 
 class _homePageState extends State<homePage> {
-  var i  = 0;
+  var i  = 1;
   var items = [
     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
     BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
