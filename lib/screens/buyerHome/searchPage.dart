@@ -30,7 +30,7 @@ class _searchPageState extends State<searchPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "search XtraEats",
+                        hintText: "Search XtraEats",
                         icon: Icon (Icons.search),
                         border: InputBorder.none,
                       ),
