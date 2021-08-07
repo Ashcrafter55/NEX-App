@@ -1,15 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template_project/helpers/globalVar.dart';
-import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/buyerHome/buyerHome.dart';
-import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/buyerHome/homePage.dart';
-import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
 import 'package:flutter_template_project/screens/sellerHome/SellerHome.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
-import 'package:flutter_template_project/widgets/custom_text.dart';
-import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:get/get.dart';
 
 String alert = " ";
@@ -78,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onTap: (){
                     if (Email.text == "Seller" && Password.text == "Seller"){
                       Get.offAll(sellHomePage());
-                      restaurantName.text = "Example's diner";
+                      restaurantName.text = "Xtra Eats Demo";
                       for (int i = 0; i < 15; i++){
                         foodMenu.add("Food $i");
                         stock.add(0);
