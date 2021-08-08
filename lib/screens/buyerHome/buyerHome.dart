@@ -15,7 +15,7 @@ class _homeState extends State<home> {
           children: [
             Row(
               children: [
-                Image.asset('images/XtraEatsLogo.jpeg')
+                Image.asset('images/Logo.png')
               ],
             )
 
