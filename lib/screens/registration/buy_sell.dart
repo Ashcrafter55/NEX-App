@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template_project/helpers/style.dart';
-import 'package:flutter_template_project/screens/buyerHome/home.dart';
 import 'package:flutter_template_project/screens/registration/buyerRegistration.dart';
 import 'package:flutter_template_project/screens/registration/sellerRegistration.dart';
-import 'package:flutter_template_project/screens/login/login.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
-import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 class BuySell extends StatelessWidget {
