@@ -79,6 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                     } else if (Email.text == "Buyer" && Password.text == "Buyer"){
                       Get.offAll(homePage());
+                      Name.text = "Simon Ryding";
                     } else {
                       setState(() {
                         alert = "Incorrect Email or Password";

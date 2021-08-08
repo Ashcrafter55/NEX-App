@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart';
 
 class SellProfile extends StatefulWidget {
   SellProfile({Key key}) : super(key: key);
@@ -14,7 +15,7 @@ class _SellProfileState extends State<SellProfile> {
       body: Container(
         child: Column(
           children: [
-            Text("Profile page")
+
           ]
         )
       ),

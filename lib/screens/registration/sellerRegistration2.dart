@@ -42,11 +42,12 @@ class _SellerRegistrationScreen2State extends State<SellerRegistrationScreen2> {
               child: SizedBox(
                 width: 300,
                 child: TextField(
+                  controller: description,
+                  keyboardType: TextInputType.multiline,
+                  maxLines: null,
                   decoration: InputDecoration(
                       labelText: "Description of Restaurant",
                       hintText: "is very cool yes",
-                      contentPadding:
-                      EdgeInsets.symmetric(vertical: 80, horizontal: 10),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20))),
                 ),

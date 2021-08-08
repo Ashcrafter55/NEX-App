@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template_project/helpers/globalVar.dart';
 import 'package:flutter_template_project/screens/buyerHome/homePage.dart';
 import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:get/get.dart';
@@ -33,7 +34,8 @@ class _BuyerRegistrationScreenState extends State<BuyerRegistrationScreen> {
               Center(
                 child: SizedBox(
                   width: 300,
-                  child: TextField(
+                  child: TextFormField(
+                    controller: Name,
                     decoration: InputDecoration(
                         labelText: "Name",
                         hintText: "firstName lastName",
@@ -129,9 +131,7 @@ class _BuyerRegistrationScreenState extends State<BuyerRegistrationScreen> {
               Center(
                 child: SizedBox(
                   width: 300,
-                  child: Image(
-                    image: NetworkImage('https://miro.medium.com/max/1400/1*qYUvh-EtES8dtgKiBRiLsA.png'),
-                  ),
+                  child: Image.asset('images/Map.png'),
                 ),
               ),
               SizedBox(
