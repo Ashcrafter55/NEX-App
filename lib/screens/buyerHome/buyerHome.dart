@@ -11,9 +11,9 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
+        body: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
+            Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('images/Logo.png')
               ],

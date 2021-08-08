@@ -25,7 +25,31 @@ class _resultCardsState extends State<resultCards> {
                       color: Colors.black,
                       fontSize: 15
                   ),),
-                )
+                ),
+                SizedBox(
+                  child: Text("Krispy Kream", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15
+                  ),),
+                ),
+                SizedBox(
+                  child: Text("Donut Wheel", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15
+                  ),),
+                ),
+                SizedBox(
+                  child: Text("Simon's Bakery", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15
+                  ),),
+                ),
+                SizedBox(
+                  child: Text("Somi Somi", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15
+                  ),),
+                ),
               ],
             ),
           ]
