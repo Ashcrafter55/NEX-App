@@ -89,7 +89,6 @@ class _SellProfileState extends State<SellProfile> {
                   ),
                 ),
               ),
-
             ],
           ),
         )

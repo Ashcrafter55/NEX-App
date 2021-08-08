@@ -10,9 +10,19 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Text("Screen one")
-    );
+    return Scaffold(
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset('images/XtraEatsLogo.jpeg')
+              ],
+            )
+
+          ],
+        )
+
+        );
   }
 }
 
